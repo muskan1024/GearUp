@@ -19,18 +19,21 @@ async function sellerSignIn(req, res) {
       return res.status(401).send("Invalid Credentials!");
     }
   
-    const token = jwt.sign(
-      {
-        _id: seller._id,
-        name: `${seller.fullName} ${seller.shopName}`,
-        isAdmin: seller.role === ADMIN,
-      },
-      "1@3456Qw-"
-    );
-    res.header(AUTH_TOKEN, token).send({
-      name: `${seller.fullName} ${seller.shopName}`,
-      email: seller.email,
-      isAuthenticated: true,
+    // const token = jwt.sign(
+    //   {
+    //     _id: seller._id,
+    //     name: `${seller.fullName} ${seller.shopName}`,
+    //     isAdmin: seller.role === ADMIN,
+    //   },
+    //   "1@3456Qw-"
+    // );
+    // res.header(AUTH_TOKEN, token).send({
+    //   name: `${seller.fullName} ${seller.shopName}`,
+    //   email: seller.email,
+    //   isAuthenticated: true,
+    // });
+    res.send({
+      message: "Login successful!",
     });
 }
 

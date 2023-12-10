@@ -21,8 +21,9 @@ const LoginS = () => {
       );
 
       if (response.status === 200) {
-        history("/home");
+        history("/seller/home");
         console.log("Login successful");
+        console.log(response.data);
       } else {
         console.error("Login failed");
       }
@@ -81,7 +82,9 @@ const LoginS = () => {
             />
           </div>
 
-          <span id="login_failed" className="text-red-700 font-bold mb-2">{errorMessage}</span>
+          <span id="login_failed" className="text-red-700 font-bold mb-2">
+            {errorMessage}
+          </span>
           <div className="w-full flex flex-col my-2 font-russo">
             <button className="w-full text-white my-2 bg-[#F50500] rounded-md p-4 text-center flex items-center justify-center cursor-pointer">
               Log in
@@ -98,7 +101,10 @@ const LoginS = () => {
         <div className="w-full flex items-center justify-center font-russo">
           <p className="text-sm font-normal text-black">
             New Seller?
-            <Link to="/seller/signup" className="font-semibold underline underline-offset-2 cursor-pointer">
+            <Link
+              to="/seller/signup"
+              className="font-semibold underline underline-offset-2 cursor-pointer"
+            >
               {" "}
               Register for free.
             </Link>
