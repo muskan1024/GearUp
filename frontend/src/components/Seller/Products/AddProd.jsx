@@ -26,7 +26,7 @@ export const AddProd = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3002/api/v1/seller/manageproducts/addproducts",
+        "http://localhost:3002/api/v1/seller/products",
         prodData,
       );
 

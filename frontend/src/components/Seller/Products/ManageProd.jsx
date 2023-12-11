@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { SProductList } from "./SProductList";
 
 export const ManageProd = () => {
   return (
@@ -20,6 +21,7 @@ export const ManageProd = () => {
           </Link>
         </div>
       </div>
+      <SProductList/>
       <div className="text-[50px] text-center m-8 shadow-md rounded-xl bg-gray-100 p-6 ">
         <Link to="/seller/manageproducts/addproducts">
           <div className="rounded-full inline-block pr-5 pl-5 bg-gray-300 font-bold">

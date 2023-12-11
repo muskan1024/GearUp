@@ -18,9 +18,9 @@ const Product = mongoose.model(
         required: true,
       },
       category: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Category",
-        // type: String,
+        // type: mongoose.Schema.Types.ObjectId,
+        // ref: "Category",
+        type: String,
         required: true,
       },
       price: {

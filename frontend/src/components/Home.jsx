@@ -3,6 +3,8 @@ import Typewriter from "typewriter-effect";
 import NavBar from "./NavBar";
 import Cate from "./Cate";
 import { Footer } from "./Footer";
+import { ProductList } from "./Products/ProductList";
+import { T4ProductList } from "./Products/T4ProductList";
 
 function Home() {
   return (
@@ -39,7 +41,13 @@ function Home() {
         </div>
       </div>
       <Cate />
-      <Footer/>
+      <div className="bg-gray-100 p-4 m-4 rounded-lg">
+        <h1 className="font-russo text-xl text-center">
+          Newly Added Spare Parts
+        </h1>
+        <T4ProductList/>
+      </div>
+      <Footer />
     </>
   );
 }

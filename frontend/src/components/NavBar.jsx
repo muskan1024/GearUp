@@ -15,7 +15,7 @@ function NavBar() {
         <Link to="#">
         <img
           className="w-[100px] sm:w-[130px] "
-          src="images\GearUp-removebg-preview-1.png"
+          src="\images\GearUp-removebg-preview-1.png"
           alt=""
           srcset=""
         />
@@ -99,7 +99,7 @@ function NavBar() {
         </Box>
       </div>
       <div className=" grid-flow-col xl:text-xl lg:text-md lg:grid justify-around p-2 font-russo bg-gray-200 hidden  xl:grid">
-        <h1 className="hover:text-[#F50500] hover:underline">Repair Parts</h1>
+        <Link to="/home/allproducts"><h1 className="hover:text-[#F50500] hover:underline">All Repair Parts</h1></Link>
         <h1 className="hover:text-[#F50500] hover:underline">Body Parts</h1>
         <h1 className="hover:text-[#F50500] hover:underline">Oils & Fluids</h1>
         <h1 className="hover:text-[#F50500] hover:underline">Wheels & Tiers</h1>
