@@ -13,11 +13,15 @@ export const SProductCard = ({ product }) => {
   return (
     <Grid item xs="3">
       <Card className="h-[420px]">
-        <Grid container alignItems={"center"} justifyContent="center">
-          <img src={product.imageURL} className="w-fit" />
-        </Grid>
+        <div>
+          <img src={product.imageURL} className="object-cover h-60 mx-auto" />
+        </div>
         <CardContent>
-          <Typography variant="h5" component="div">
+          <Typography sx={{
+              textOverflow: "ellipsis",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+            }} variant="h5" component="div">
             {product.prodName}
           </Typography>
           <Typography variant="h6" component="div">
@@ -34,8 +38,12 @@ export const SProductCard = ({ product }) => {
             {product.description}
           </Typography>
           <div className="font-bold">
-            Manufacturer: 
-            <Typography className="inline-block" sx={{}} color="text.secondary">
+            Manufacturer:
+            <Typography className="" sx={{
+              textOverflow: "ellipsis",
+              // overflow: "hidden",
+              whiteSpace: "nowrap",
+            }} color="text.secondary">
               {product.manufacturer}
             </Typography>
           </div>

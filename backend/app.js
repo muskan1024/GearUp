@@ -35,7 +35,7 @@ app.get('/api/v1/seller/products', async(req, res) => {
 
 app.get('/api/v1/seller/products/top-5', async(req, res) => {
   try {
-    const products = await Product.find({}, null, { sort: { rating: -1 }, limit: 5 });
+    const products = await Product.find({}, null, { sort: { rating: -1 }, limit: 4 });
     res.json(products);
   } catch (err) {
     res.status(500).send({ message: err.message });
