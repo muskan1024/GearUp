@@ -17,20 +17,19 @@ export const ProductCard = ({ product }) => {
             ₹{product.price}
           </Typography>
           <Typography
-            sx={{ overflow: "auto", }}
+            sx={{textOverflow: "ellipsis",
+            overflow: "hidden",
+            whiteSpace: "nowrap",}}
             color="text.secondary"
           >
             {product.description}
           </Typography>
-          <Typography>
-          Manufacturer: 
-          </Typography>
-          <Typography
-            sx={{ overflow: "auto",  }}
-            color="text.secondary"
-          >
-            {product.manufacturer}
-          </Typography>
+          <div className="font-bold">
+            Manufacturer: 
+            <Typography className="inline-block" sx={{}} color="text.secondary">
+              {product.manufacturer}
+            </Typography>
+          </div>
         </CardContent>
         <CardActions>
           <Link to={`/product/${product._id}`}>

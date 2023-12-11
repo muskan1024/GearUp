@@ -43,7 +43,7 @@ function Home() {
       <Cate />
       <div className="bg-gray-100 p-4 m-4 rounded-lg">
         <h1 className="font-russo text-xl text-center">
-          Newly Added Spare Parts
+          Newly Added Products
         </h1>
         <T4ProductList/>
       </div>

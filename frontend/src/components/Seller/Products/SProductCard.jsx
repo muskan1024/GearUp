@@ -1,13 +1,20 @@
-import React from 'react'
-import { Button, Card, CardActions, CardContent, Grid, Typography } from '@mui/material'
-import {Link} from 'react-router-dom'
+import React from "react";
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  Grid,
+  Typography,
+} from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const SProductCard = ({ product }) => {
   return (
     <Grid item xs="3">
-      <Card className='h-[420px]'>
+      <Card className="h-[420px]">
         <Grid container alignItems={"center"} justifyContent="center">
-          <img src={product.imageURL} className='w-fit' />
+          <img src={product.imageURL} className="w-fit" />
         </Grid>
         <CardContent>
           <Typography variant="h5" component="div">
@@ -17,20 +24,21 @@ export const SProductCard = ({ product }) => {
             ₹{product.price}
           </Typography>
           <Typography
-            sx={{ overflow: "auto", }}
+            sx={{
+              textOverflow: "ellipsis",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+            }}
             color="text.secondary"
           >
             {product.description}
           </Typography>
-          <Typography>
-          Manufacturer: 
-          </Typography>
-          <Typography
-            sx={{ overflow: "auto",  }}
-            color="text.secondary"
-          >
-            {product.manufacturer}
-          </Typography>
+          <div className="font-bold">
+            Manufacturer: 
+            <Typography className="inline-block" sx={{}} color="text.secondary">
+              {product.manufacturer}
+            </Typography>
+          </div>
         </CardContent>
         {/* <CardActions>
           <Link to={`/product/${product._id}`}>
@@ -39,5 +47,5 @@ export const SProductCard = ({ product }) => {
         </CardActions> */}
       </Card>
     </Grid>
-  )
-}
+  );
+};
