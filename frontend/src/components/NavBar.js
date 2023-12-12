@@ -22,7 +22,7 @@ const NavBar = () => {
   return (
     <>
       <div className="text-center grid grid-cols-2 sm:grid-cols-4 p-3 shadow-md gap-2">
-        <Link to="#">
+        <Link to="/home">
           <img
             className="w-[100px] sm:w-[130px] "
             src="\images\GearUp-removebg-preview-1.png"
