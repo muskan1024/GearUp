@@ -13,11 +13,9 @@ export const ProductCard = ({ product }) => {
   return (
     <Grid item xs="3">
       <Card className="h-[480px]">
-        {/* <Grid container alignItems={"center"} justifyContent="center" className='w-1/2 border-2'> */}
         <div>
           <img src={product.imageURL} className="object-cover h-60 mx-auto" />
         </div>
-        {/* </Grid> */}
         <CardContent>
           <Typography
             sx={{
@@ -55,7 +53,7 @@ export const ProductCard = ({ product }) => {
           </div>
         </CardContent>
         <CardActions>
-          <Link to={`/product/${product._id}`}>
+          <Link to={`/products/${product._id}`}>
             <Button variant="contained">Buy</Button>
           </Link>
         </CardActions>

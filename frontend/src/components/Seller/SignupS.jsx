@@ -44,12 +44,6 @@ export default function SignupS() {
   };
   return (
     <form onSubmit={handleSignup} noValidate className="w-full h-screen flex item-start">
-      {/* <div className="relative w-1/3 h-full flex flex-col">
-        <img
-          src="/images/Signup-bg.avif"
-          className="w-full h-full object-cover"
-        />
-      </div> */}
       <div className="w-full h-full bg-white flex flex-col p-5 sm:p-12 justify-between items-center">
         <img
           src="/images/GearUp-gif.gif"
@@ -144,8 +138,6 @@ export default function SignupS() {
                 type="Password"
                 placeholder="Confirm your Password"
                 name="password"
-                // value={password}
-                // onChange={(e)=>setPassword(e.target.value)}
                 className=" text-black py-3 bg-transparent border-b border-black outline-none focus:outline-none"
               />
             </div>

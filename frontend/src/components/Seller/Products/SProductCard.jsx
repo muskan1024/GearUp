@@ -7,7 +7,6 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { Link } from "react-router-dom";
 
 export const SProductCard = ({ product }) => {
   return (
@@ -48,11 +47,6 @@ export const SProductCard = ({ product }) => {
             </Typography>
           </div>
         </CardContent>
-        {/* <CardActions>
-          <Link to={`/product/${product._id}`}>
-            <Button variant="contained">Buy</Button>
-          </Link>
-        </CardActions> */}
       </Card>
     </Grid>
   );

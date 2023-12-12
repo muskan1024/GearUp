@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import NavBar from "./NavBar";
 import Cate from "./Cate";
 import { Footer } from "./Footer";
-import { ProductList } from "./Products/ProductList";
 import { T4ProductList } from "./Products/T4ProductList";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+
   return (
     <>
       <NavBar />
@@ -40,7 +42,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <Cate />
+      <Cate/>
       <div className="bg-gray-100 p-4 m-4 rounded-lg">
         <h1 className="font-russo text-xl text-center">
           Newly Added Products

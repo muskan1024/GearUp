@@ -44,10 +44,6 @@ const LoginS = () => {
       noValidate
       className="w-full h-screen flex item-start "
     >
-      {/* <img
-        src="images\login-bg.avif"
-        className=" object-cover relative w-full lg:relative lg:w-1/2 h-full"
-      /> */}
       <div className="relative w-full h-full bg-white flex flex-col p-4 lg:p-20 justify-between items-center">
         <img
           src="\images\GearUp-gif.gif"

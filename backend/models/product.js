@@ -23,6 +23,13 @@ const Product = mongoose.model(
         type: String,
         required: true,
       },
+      categoryName: {
+        type: String,
+        virtual: true,
+        get: function () {
+          return this.populate({ path: "category", select: "categoryName" }).then(() => this.category.categoryName);
+        },
+      },
       price: {
         type: Number,
         required: true,

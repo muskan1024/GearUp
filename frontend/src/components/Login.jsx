@@ -104,7 +104,7 @@ const Login = () => {
             </Link>
           </div>
 
-          <div className="w-full flex items-center justify-center relative py-2 font-russo">
+          {/* <div className="w-full flex items-center justify-center relative py-2 font-russo">
             <div className="w-full h-[1px] bg-black"></div>
             <p className="text-lg absolute text-black/80 bg-white">or</p>
           </div>
@@ -114,7 +114,7 @@ const Login = () => {
               className="h-6 mr-2"
             />
             Sign in with Google
-          </div>
+          </div> */}
         </div>
 
         <div className="w-full flex items-center justify-center font-russo">

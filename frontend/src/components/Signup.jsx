@@ -5,42 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [errorMessage, setErrorMessage] = useState("");
-  // const [userName, setUserName] = useState('');
-  // const [fullName , setName] = useState('');
-  // const [password , setPassword] = useState('');
-  // const [email , setEmail] = useState('');
-  // const [contactNumber, setContactNumber] = useState('');
-
-  // const router = useNavigate();
-  // const handleSignup = async(e) => {
-  //     e.preventDefault();
-  //     const formData = {
-  //         fullName,
-  //         userName,
-  //         password,
-  //         email,
-  //         contactNumber
-  //     };
-  //     try{
-
-  //         const response = await axios.post('http://localhost:3002/api/v1/users', formData,{
-  //             headers:{
-  //                 'Content-Type' : 'application/json',
-  //             },
-  //         })
-  //         if(response.status === 200){
-  //             router('/login');
-  //             // <Link to="/login"/>
-  //         }
-  //         else{
-  //             console.error('Error Registration', error);
-  //         }
-  //     }
-  //     catch(error){
-  //         console.error('Failed', error);
-  //     }
-  // }
-
   const history = useNavigate();
   const handleSignup = async (event) => {
     event.preventDefault();
@@ -68,8 +32,6 @@ export default function Signup() {
       }
     } catch (error) {
       console.error("An error occurred while registering:", error);
-      // document.getElementById("signup_failed").innerHTML =
-      //   "Email or Password is incorrect!";
       if (error.response && error.response.data) {
         setErrorMessage(error.response.data);
       } else {
@@ -163,8 +125,6 @@ export default function Signup() {
                 type="Password"
                 placeholder="Confirm your Password"
                 name="password"
-                // value={password}
-                // onChange={(e)=>setPassword(e.target.value)}
                 className=" text-black py-3 bg-transparent border-b border-black outline-none focus:outline-none"
               />
             </div>
@@ -178,7 +138,7 @@ export default function Signup() {
             </button>
           </div>
 
-          <div className=" flex items-center justify-center relative py-2 font-russo">
+          {/* <div className=" flex items-center justify-center relative py-2 font-russo">
             <div className="w-3/4 h-[1px] bg-black"></div>
             <p className="text-lg absolute text-black/80 bg-white">or</p>
           </div>
@@ -190,7 +150,7 @@ export default function Signup() {
               />
               Sign Up with Google
             </div>
-          </div>
+          </div> */}
           <div className="w-full flex items-center justify-center font-russo">
             <p className="text-sm font-normal text-black">
               Already have a account?
