@@ -198,7 +198,7 @@ export const AddProd = () => {
           </div>
         </div>
       </form>
-      <div className="border-dotted border-2"></div>
+      {/* <div className="border-dotted border-2"></div>
       <form
         onSubmit={handleCategory}
         noValidate
@@ -234,7 +234,7 @@ export const AddProd = () => {
             </button>
           </div>
         </div>
-      </form>
+      </form> */}
     </>
   );
 };
