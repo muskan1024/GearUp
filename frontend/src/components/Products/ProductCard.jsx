@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 export const ProductCard = ({ product }) => {
   return (
-    <Grid item xs="3">
+    <Grid item xs={12} sm={6} md={4} lg={3}>
       <Card className="h-[480px]">
         <div>
           <img src={product.imageURL} className="object-cover h-60 mx-auto" />

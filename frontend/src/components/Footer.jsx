@@ -1,7 +1,21 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3002/api/v1/seller/products/category")
+      .then((response) => {
+        setCategories(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <div className="bg-gray-200 p-4 font-rubik grid grid-cols-2 md:grid-cols-4 gap-5 text-xs md:text-base ">
       <div>
@@ -19,7 +33,17 @@ export const Footer = () => {
       <div className="hidden sm:block">
         <p className="font-russo">Catalog</p>
         <div className="grid grid-cols-2 ">
-          <p className="hover:text-[#F50500]">Wheels & Tiers</p>
+        {categories.map((category) => (
+          <Link to={`/products/categories/${category._id}`}>
+            <div
+              key={category._id}
+              className="hover:text-[#F50500]"
+            >
+              {category.categoryName}
+            </div>
+          </Link>
+        ))}
+          {/* <p className="hover:text-[#F50500]">Wheels & Tiers</p>
           <p className="hover:text-[#F50500]">Spare Parts</p>
           <p className="hover:text-[#F50500]">Body Parts</p>
           <p className="hover:text-[#F50500]">Oil & Fluids</p>
@@ -27,7 +51,7 @@ export const Footer = () => {
           <p className="hover:text-[#F50500]">Electronics</p>
           <p className="hover:text-[#F50500]">Interior</p>
           <p className="hover:text-[#F50500]">Exterior</p>
-          <p className="hover:text-[#F50500]">Tools & Garages</p>
+          <p className="hover:text-[#F50500]">Tools & Garages</p> */}
         </div>
       </div>
       <div className="grid gap-3">
